@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/Portfolio.png" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about-me">About me</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contacts">Contacts</a></li>
+                </ul>
+            </nav>
+            <div class="home-text">
+                <p>Welcome to my Portfolio</p>
+                <h1>My name is <span>John Lloyd</span>,<br>I am a BSIT student</h1>
+            </div>
+        </div>
+    </div>
+    <div id="about-me">
+        <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/me.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hello, my name is John Lloyd E. Basister. I am 19 years old and I was born on the 29th of September 2005.
+                    I am currently a second year student taking Bachelor of Science in Information Technology, enrolled in Camarines
+                    Norte State College (CNSC). My home town is Paracale, Camarines Norte, but I currently stay in Daet, Camarines Norte
+                    to study.
+                </p>
+                <div class="tabs">
+                    <p class="tab-links active-tab" onclick="opentab('education')">Education</p>
+                    <p class="tab-links"onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links"onclick="opentab('hobbies')">Hobbies</p>
+                </div>
+                <div class="contents active-content" id="education">
+                    <ul>
+                        <li><span>Elementary</span><br>Paracale Elementary School</li>
+                        <li><span>Secondary</span><br>Paracale National High School</li>
+                        <li><span>Tertiary</span><br>Camarines Norte State College</li>
+                    </ul>
+                </div>
+                <div class="contents" id="skills">
+                    <ul>
+                        <li><span>Design</span><br>Graphics & Web Design</li>
+                        <li><span>Development</span><br>Website Development</li>
+                        <li><span>Prototype</span><br>Low & High Fidelity Prototype</li>
+                    </ul>
+                </div>
+                <div class="contents" id="hobbies">
+                    <ul>
+                        <li><span>Sports</span><br>Basketball</li>
+                        <li><span>Entertainment</span><br>Anime & Movies</li>
+                        <li><span>Games</span><br>Video Games</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div id="gallery">
+        <div class="container">
+            <div class="sub-title">Gallery</div>
+            <div class="photos">
+                <div class="photo">
+                    <img width="350" src="images/image1.jpeg">
+                </div>
+                <div class="photo">
+                    <img width="350" src="images/image2.jpeg">
+                </div>
+                <div class="photo">
+                    <img width="350" src="images/image3.jpeg">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contacts">
+            <div class="container">
+                <div class="row"></div>
+                    <div class="contact">
+                        <h1 class="sub-title">Contacts</h1>
+                        <p><i class="fa-solid fa-envelope"></i>johnlloydbasister@gmail.com</p>
+                        <p><i class="fa-solid fa-phone"></i>09509019872</p>
+                        <div class="socmed-icons">
+                        <a href="https://www.facebook.com/yriulricjhnllydbsistr29Pewds" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://www.instagram.com/yuri.machiavelli/" target="_blank"><i class="fa-brands fa-instagram"></i></i></a>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <footer>
+        <div class="copyright">
+
+            <p>© 2024 John Lloyd Basister. All Rights Reserved</p>
+
+        </div>
+    </footer>
+    
+
+    <script>
+
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("contents");
+        
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-tab");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-content");
+            }
+            event.currentTarget.classList.add("active-tab");
+            document.getElementById(tabname).classList.add("active-content");
+        }
+        
+
+    </script>
+    
+    
+</body>
+</html>
